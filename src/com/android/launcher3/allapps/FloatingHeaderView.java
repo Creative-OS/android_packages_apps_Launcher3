@@ -321,7 +321,7 @@ public class FloatingHeaderView extends LinearLayout implements
 
         int clipTop = getPaddingTop() - mHeaderTopAdjustment;
         if (mTabsHidden) {
-            clipTop += getPaddingBottom() - mHeaderBottomAdjustment * 2;;
+            clipTop += getPaddingBottom() * 2 - mHeaderBottomAdjustment;
         }
         mRVClip.top = mTabsHidden ? clipTop : 0;
         mHeaderClip.top = clipTop;
