@@ -557,17 +557,6 @@ public class Launcher extends StatefulActivity<LauncherState>
     }
 
     @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) { 
-        switch (key) {
-            case Utilities.SHOW_HOTSEAT_BG:
-                recreate();
-                break;
-            default:
-                break;
-        }
-    }
-
-    @Override
     public void onPluginConnected(LauncherOverlayPlugin overlayManager, Context context) {
         switchOverlay(() -> overlayManager.createOverlayManager(this, this));
     }
